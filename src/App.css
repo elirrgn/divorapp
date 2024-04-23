@@ -1,3 +1,33 @@
+/* Animation */
+
+@keyframes slideInLeftRotate {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(-20deg);
+  }
+}
+
+@keyframes slideInRightRotate {
+  0% {
+    transform: translateX(100px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(-20deg);
+  }
+}
+
+.animation--slideInLeftRotate {
+  animation: slideInLeftRotate 1.3s forwards;
+}
+
+.animation--slideInRightRotate {
+  animation: slideInRightRotate 1.3s forwards;
+}
+
 :root {
   --accent: #FB5F0E;
   --primary: #727073;
@@ -213,19 +243,16 @@ header {
   left: -40%;
   top: 5%;
   width: 60%;
-  transform: rotate(-20deg);
 }
 
 .hero-abs-onboarding {
   width: 60%;
-  transform: rotate(25deg);
   top: 30%;
   right: -50%;
 }
 
 .hero-abs-fav {
   width: 65%;
-  transform: rotate(-15deg);
   bottom: -5%;
   left: -35%;
 }

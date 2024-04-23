@@ -34,9 +34,9 @@ function Hero(){
                 <div className="phone">
                     <div className="phone-div-img">
                         <img src={phone} alt="" className="phone-img" draggable="false"/>
-                        <img src={fav} alt="" className="hero-abs hero-abs-fav" draggable="false"/>
-                        <img src={tyimg} alt="" className="hero-abs hero-abs-ty" draggable="false"/>
-                        <img src={onBoardingImg} alt="" className="hero-abs hero-abs-onboarding" draggable="false"/>
+                        <img src={fav} alt="" className="hero-abs hero-abs-fav animation--slideInRightRotate" draggable="false"/>
+                        <img src={tyimg} alt="" className="hero-abs hero-abs-ty animation--slideInRightRotate" draggable="false"/>
+                        <img src={onBoardingImg} alt="" className="hero-abs hero-abs-onboarding animation--slideInLeftRotate" draggable="false"/>
                     </div>
                 </div>
             </div>
