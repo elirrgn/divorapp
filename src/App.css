@@ -20,12 +20,40 @@
   }
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  70% {
+    transform: translateY(-20px);
+  }
+
+  40%, 100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes getBigger {
+  0%{
+  }
+
+  100% {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+}
+
 .animation--slideInLeftRotate {
   animation: slideInLeftRotate 1.3s forwards;
 }
 
 .animation--slideInRightRotate {
   animation: slideInRightRotate 1.3s forwards;
+}
+
+.animation--bounce {
+  animation: bounce 1.2s ease-in-out forwards;
 }
 
 :root {
@@ -125,7 +153,7 @@ header {
   color: var(--accent) !important;
   text-decoration: underline;
   transition: color ease-in-out 0.5s;
-
+  animation: getBigger 0.2s forwards;
 }
 
 .download-menu ul {

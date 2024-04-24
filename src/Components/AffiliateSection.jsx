@@ -59,7 +59,7 @@ function AffiliateSection() {
             <div className="affiliate-card-container">
                 {restaurants.map((r) => (
                     <Card key={r.id} name={r.name} imagesrc={r.image} type={r.type} text={r.text} />
-                ))};
+                ))}
             </div>
         </div>
     );
