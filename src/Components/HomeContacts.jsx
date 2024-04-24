@@ -12,7 +12,7 @@ function HomeContacts() {
                 </h1>
                 <div className="home-contacts-flex">
                     <EmailForm />
-                    <iframe src={srcMap} width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src={srcMap} width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="home-contacts-map"></iframe>
                 </div>
             </div>
         </div>
