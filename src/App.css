@@ -171,7 +171,6 @@ header {
 
 .menu ul li a:hover {
   color: var(--accent) !important;
-  text-decoration: underline;
   transition: color ease-in 0.2s;
   animation: getBigger 0.2s ease-in forwards;
 }
@@ -207,7 +206,7 @@ header {
 }
 
 .hero-container {
-  padding-top: 1.7rem;
+  padding-top: 4rem;
 }
 
 .hero-text {
