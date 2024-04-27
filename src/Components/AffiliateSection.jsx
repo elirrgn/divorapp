@@ -48,21 +48,23 @@ function AffiliateSection() {
 
     return(
         <>
-            <div className="container affiliate-container">
-                <div className="affiliate-text-container">
-                    <h1>our affiliate restaurants</h1>
+            <div className="affiliate-section">
+                <div className="container affiliate-container">
+                    <div className="affiliate-text-container">
+                        <h1>our affiliate restaurants</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="affiliate-card-overflow-hidden">
-                <div className="affiliate-card-container">
-                    {restaurants.map((r) => (
-                        <Card key={r.id} name={r.name} imagesrc={r.image} type={r.type} />
-                    ))}
-                </div>
-                <div className="affiliate-card-container">
-                    {restaurants.map((r) => (
-                        <Card key={r.id} name={r.name} imagesrc={r.image} type={r.type} />
-                    ))}
+                <div className="affiliate-card-overflow-hidden">
+                    <div className="affiliate-card-container">
+                        {restaurants.map((r) => (
+                            <Card key={r.id} name={r.name} imagesrc={r.image} type={r.type} />
+                        ))}
+                    </div>
+                    <div className="affiliate-card-container">
+                        {restaurants.map((r) => (
+                            <Card key={r.id} name={r.name} imagesrc={r.image} type={r.type} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

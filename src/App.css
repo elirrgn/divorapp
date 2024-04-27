@@ -1,3 +1,29 @@
+:root {
+  --accent: #FB5F0E;
+  --primary: #727073;
+  --secondary: #807B7F;
+  --inactive: #B7B7B9;
+  --secondaryBg: #F2F2F2;
+  --background: #FFFBFF;
+  
+  
+  /** CSS PRIMARY COLORS */ 
+  --color-primary-a0:  #ffffff;
+  --color-primary-a10:  #ffd9c3;
+  --color-primary-a20:  #ffb289;
+  --color-primary-a30:  #ff8b51; 
+  --color-primary-a50:  #fb5f0e;
+  --color-primary-a60:  #b74912;
+  --color-primary-a70:  #773312;
+  --color-primary-a80:  #3d1d0e;
+  --color-primary-a90:  #000000;
+
+  --dark: #000000;
+  --light: #FFFFFF;
+
+  --fs: 16px;
+}
+
 /* Animation */
 
 @keyframes slideInLeftRotate {
@@ -34,26 +60,6 @@
   }
 }
 
-@keyframes getBigger {
-  0%{
-  }
-
-  100% {
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-}
-
-@keyframes getBackSmaller {
-  0%{
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-
-  100% {
-  }
-}
-
 @keyframes horizontalSlider {
   0% {
     transform: translateX(0);
@@ -76,18 +82,9 @@
   animation: bounce 1.2s ease-in-out forwards;
 }
 
-:root {
-  --accent: #FB5F0E;
-  --primary: #727073;
-  --secondary: #807B7F;
-  --inactive: #B7B7B9;
-  --secondaryBg: #F2F2F2;
-  --background: #FFFBFF;
-
-}
-
 html {
-  font-size: 16px; /* Default font-size */
+  font-size: var(--fs); /* Default font-size */
+  scroll-snap-type: y mandatory;
 }
 
 
@@ -128,7 +125,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
-  background: #F6E58D;
+  background: var(--color-primary-a10);
   z-index: 1000;
 }
 
@@ -139,6 +136,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  scroll-snap-align: center;
 }
 
 .icon {
@@ -169,14 +167,19 @@ header {
   text-transform: uppercase;
 }
 
-.menu ul li a:hover {
-  color: var(--accent) !important;
-  transition: color ease-in 0.2s;
-  animation: getBigger 0.2s ease-in forwards;
+.menu ul li:hover {
+  scale: 1.2;
+  transition: all 0.2s;
 }
 
-.menu ul li a:not(:hover) {
-  animation: getBackSmaller 0.2s ease-in forwards;
+.menu ul li:not(:hover) {
+  transition: all 0.2s;
+}
+
+.menu ul li a:hover {
+  color: var(--accent) !important;
+  font-weight: bold;
+  transition: all ease-in-out 0.2s;
 }
 
 .download-menu ul {
@@ -249,6 +252,26 @@ header {
   align-items: center;
   margin-right: 2rem;
   padding: 2px;
+  padding-top: 1rem;
+}
+
+.hero-download-link:hover {
+  scale: 1.1;
+  transition: all 0.5s;
+}
+
+.hero-download-link:not(:hover) {
+  transition: all 0.5s;
+}
+
+.hero-download-link:hover p,.hero-download-link:hover .hero-download-img {
+  fill: var(--color-primary-a50);
+  color: var(--color-primary-a50);
+  transition: all 0.5s;
+}
+
+.hero-download-link:not(:hover) p,.hero-download-link:not(:hover) .hero-download-img {
+  transition: all 0.5s;
 }
 
 .hero-download-link p {
@@ -256,11 +279,12 @@ header {
   margin-left: 0.25rem;
   text-transform: capitalize;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--color-primary-a90);
 }
 
 .hero-download-img {
   width: 30px;
+  fill: var(--color-primary-a90);
 }
 
 .hero-phone {
@@ -310,9 +334,18 @@ header {
 
 /* Affiliates CSS Section */
 
-.affiliate-container {
-  justify-content: center;
+.affiliate-section {
+  min-height: 35rem;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+.affiliate-container {
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: none;
 }
 
 .affiliate-text-container {
@@ -342,7 +375,7 @@ header {
 }
 
 .affiliate-card-overflow-hidden:hover .affiliate-card-container{
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .affiliate-card-overflow-hidden::before, .affiliate-card-overflow-hidden::after {
