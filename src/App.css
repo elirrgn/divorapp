@@ -84,7 +84,7 @@
 
 html {
   font-size: var(--fs); /* Default font-size */
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 
@@ -374,9 +374,9 @@ header {
   animation: horizontalSlider 15s linear infinite;
 }
 
-.affiliate-card-overflow-hidden:hover .affiliate-card-container{
+/*.affiliate-card-overflow-hidden:hover .affiliate-card-container{
   animation-play-state: paused;
-}
+}*/
 
 .affiliate-card-overflow-hidden::before, .affiliate-card-overflow-hidden::after {
   height: 100%;
