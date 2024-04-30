@@ -7,8 +7,7 @@ import appStore from "../assets/img/app-store.png"
 function Header() {
     const menuItems = [
         {link: "home", url:"/"},
-        {link: "contact", url:"/contact/"},
-        {link: "about us", url:"/aboutus/"}
+        {link: "contact us", url:"/contact/"},
     ];
     const menu = menuItems.map(item => <li key={item.link}><a href={item.url}>{item.link}</a></li>);
 

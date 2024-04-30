@@ -10,6 +10,7 @@
   /** CSS PRIMARY COLORS */ 
   --color-primary-a0:  #ffffff;
   --color-primary-a10:  #ffd9c3;
+  --color-primary-a10opac:  hsla(22, 100%, 88%, 0.9);
   --color-primary-a20:  #ffb289;
   --color-primary-a30:  #ff8b51; 
   --color-primary-a50:  #fb5f0e;
@@ -108,7 +109,7 @@ a {
 }
 
 body {
-  background: var(--background);
+  background: var(--color-primary-a20);
 }
 
 img {
@@ -125,7 +126,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
-  background: var(--color-primary-a10);
+  background: var(--color-primary-a20);
   z-index: 1000;
 }
 
@@ -150,7 +151,7 @@ header {
 
 .menu {
   width: fit-content;
-  min-width: 266px;
+  min-width: 200px;
 }
 
 .menu ul{
@@ -520,6 +521,80 @@ header {
   border-color: var(--primary);
 }
 
+/* CONTACT US SECTION*/
+
+.contact-header {
+  background-image: url("/src/assets/img/map-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 3/1;
+  width: 100%;
+  filter: brightness(70%);
+}
+
+.contact-container {
+  margin-top: -5%;
+  width: 80%;
+  margin-inline: auto;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  width: 30%;
+  background-color: var(--color-primary-a10opac);
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--accent) 3px solid;
+}
+
+.contact-card-icon {
+  width: 6rem;
+  background: var(--background);
+  aspect-ratio: 1/1;
+  display: flex;
+  position: relative;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  border: solid var(--accent) 3px;
+  top: -5%;
+}
+
+.contact-card-icon-img {
+  width: 50%;
+  fill: var(--accent);
+}
+
+.contact-card-title {
+  font-size: 1.2rem;
+  color: var(--color-primary-a60);
+  text-transform: uppercase;
+}
+
+.contact-card-info {
+  font-size: 0.8rem;
+  width: 70%;
+  text-align: center;
+  margin-top: 0.7rem;
+  line-height: 1.1rem;
+  font-weight: bold;
+}
+
+.contact-card-info a {
+  color: var(--color-primary-a70) !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 10px !important;
@@ -545,6 +620,9 @@ header {
     flex-direction: column;
   }
   
+  .contact-card-info {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -561,4 +639,14 @@ header {
   .hero-phone {
     width: 100%;
   }
+
+  .contact-container {
+    width: 95%;
+  }
+
+  .contact-card {
+    width: 75%;
+    margin-bottom: 3rem;
+  }
+  
 }
