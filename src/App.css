@@ -1,24 +1,15 @@
 :root {
   --accent: #FB5F0E;
-  --primary: #727073;
-  --secondary: #807B7F;
-  --inactive: #B7B7B9;
-  --secondaryBg: #F2F2F2;
-  --background: #FFFBFF;
-  
-  
-  /** CSS PRIMARY COLORS */ 
-  --color-primary-a0:  #ffffff;
-  --color-primary-a10:  #ffd9c3;
-  --color-primary-a10opac:  hsla(22, 100%, 88%, 0.9);
-  --color-primary-a20:  #ffb289;
-  --color-primary-a30:  #ff8b51; 
-  --color-primary-a50:  #fb5f0e;
-  --color-primary-a60:  #b74912;
-  --color-primary-a70:  #773312;
-  --color-primary-a80:  #3d1d0e;
-  --color-primary-a90:  #000000;
+  --accent-70: #FB5F0E;
+  --accent2: #FFF6EF;
+  --contrast: #A46B61;
 
+  --primary: #252422;
+  --secondary: #403d39;
+  --inactive: #ccc5b9;
+  --secondaryBg: #DFE0DF;
+  --background: #fffcf2;
+  
   --dark: #000000;
   --light: #FFFFFF;
 
@@ -126,7 +117,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
-  background: var(--color-primary-a20);
+  background: var(--accent2);
   z-index: 1000;
 }
 
@@ -177,9 +168,12 @@ header {
   transition: all 0.2s;
 }
 
+.menu ul li a {
+  color: var(--contrast);
+  font-weight: 700;
+}
+
 .menu ul li a:hover {
-  color: var(--accent) !important;
-  font-weight: bold;
   transition: all ease-in-out 0.2s;
 }
 
@@ -204,7 +198,7 @@ header {
 
 .hero {
   width: 100%;
-  background: var(--secondaryBg);
+  background: var(--accent2);
   padding: 5vw auto;
   z-index: -1;
 }
@@ -401,7 +395,7 @@ header {
 
 .card {
   width: 23rem;
-  background: var(--secondaryBg);
+  background: var(--accent2);
   display: inline-block;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
   border-radius: 3rem;
@@ -419,7 +413,7 @@ header {
 .card-restaurant-type {
   width: 100%;
   text-transform: capitalize;
-  color: var(--inactive);
+  color: var(--contrast);
 }
 
 .card img {
@@ -442,7 +436,7 @@ header {
 /* Home Contacts CSS section */
 
 .accent-container {
-  background: var(--accent);
+  background: var(--accent2);
   margin-top: -5px;
   padding-bottom: 4rem;
 }
@@ -452,7 +446,7 @@ header {
 }
 
 .home-contacts-title {
-  color: var(--background);
+  color: var(--contrast);
   text-transform: capitalize;
   font-size: 3rem;
   margin: 2rem 0;
@@ -470,33 +464,28 @@ header {
   display: flex;
   flex-direction: column;
   height: 75%;
-  width: 50%;
-  align-items: center;
+  width: 60%;
+}
+
+.home-contact-form-input {
+  width: 90%;
+  height: 2rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--inactive);
+  background-color: var(--light);
+  color: var(--contrast);
 }
 
 .home-contact-form-label {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.home-contact-form-input {
-  width: 20rem;
-  height: 2rem;
-  padding: 1.5rem;
-  font-size: 1rem;
-  border-radius: 1.5rem;
-  border: none;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  color: var(--contrast);
+  margin-bottom: 2px;
 }
 
 .home-contact-form-message {
-  width: 20rem;
   height: 9rem;
-  padding: 1.5rem;
-  font-size: 1rem;
-  border-radius: 1.5rem;
-  border: none;
-  background-color: hsla(0, 0%, 100%, 0.5);
   resize: none;
 }
 
@@ -505,20 +494,31 @@ header {
   height: 3rem;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 1.5rem;
-  opacity: 0.8;
+  border-radius: 0.2rem;
+  border: 1px solid var(--inactive);
+  background: var(--light);
+  color: var(--contrast);
+  text-transform: uppercase;
 }
 
 .home-contact-form-send:hover {
-  opacity: 0.7;
   cursor: pointer;
+  background: var(--contrast);
+  color: var(--light);
+  transition: all ease-in 0.3s;
+}
+
+.home-contact-form-input:focus-within {
+  outline: 2px solid var(--contrast);
+  outline-offset: -2px;
 }
 
 .home-contacts-map {
   max-width: 80%;
   margin-top: 3rem;
-  border-radius: 2rem;
-  border-color: var(--primary);
+  border-radius: 0.2rem;
+  border: 3px var(--contrast) solid;
+  border-color: var(--inactive);
 }
 
 /* CONTACT US SECTION*/
@@ -547,7 +547,7 @@ header {
 
 .contact-card {
   width: 30%;
-  background-color: var(--color-primary-a10opac);
+  background-color: var(--accent2);
   border-radius: 1rem;
   position: relative;
   display: flex;
@@ -576,7 +576,7 @@ header {
 
 .contact-card-title {
   font-size: 1.2rem;
-  color: var(--color-primary-a60);
+  color: var(--accent);
   text-transform: uppercase;
 }
 
@@ -590,7 +590,6 @@ header {
 }
 
 .contact-card-info a {
-  color: var(--color-primary-a70) !important;
   text-decoration: underline;
   cursor: pointer;
 }
