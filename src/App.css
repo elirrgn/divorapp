@@ -449,7 +449,7 @@ header {
   color: var(--contrast);
   text-transform: capitalize;
   font-size: 3rem;
-  margin: 2rem 0;
+  margin: 4rem 0 0.5rem 0;
 }
 
 .home-contacts-flex {
@@ -530,7 +530,7 @@ header {
   background-position: center;
   aspect-ratio: 3/1;
   width: 100%;
-  filter: brightness(70%);
+  filter: brightness(85%);
 }
 
 .contact-container {
