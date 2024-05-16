@@ -358,12 +358,12 @@ header {
   display: inline-block;
   column-gap: 1rem;
   padding-block: 1rem; 
-  animation: horizontalSlider 15s linear infinite;
+  animation: horizontalSlider 25s linear infinite;
 }
 
-/*.affiliate-card-overflow-hidden:hover .affiliate-card-container{
+.affiliate-card-overflow-hidden:hover .affiliate-card-container{
   animation-play-state: paused;
-}*/
+}
 
 .affiliate-card-overflow-hidden::before, .affiliate-card-overflow-hidden::after {
   height: 100%;
