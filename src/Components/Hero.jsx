@@ -1,7 +1,5 @@
 import "../App.css"
 import phone from "../assets/img/phone.png"
-import googlePlay from "../assets/img/google-play.png"
-import appStore from "../assets/img/app-store.png"
 import tyimg from "../assets/img/thank_you.png"
 import onBoardingImg from "../assets/img/on_boarding_2.png"
 import fav from "../assets/img/favorites_btn.png"
