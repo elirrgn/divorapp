@@ -1,6 +1,6 @@
 :root {
   --accent: #FB5F0E;
-  --accent-70: #FB5F0E;
+  --footer: #FFE7D4;
   --accent2: #FFF6EF;
   --contrast: #A46B61;
 
@@ -117,7 +117,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
-  background: var(--accent2);
+  background: var(--footer);
   z-index: 1000;
 }
 
@@ -525,65 +525,36 @@ header {
   filter: brightness(85%);
 }
 
-.contact-container {
-  margin-top: -5%;
-  width: 80%;
-  margin-inline: auto;
-  z-index: 10;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* Footer Section CSS */
+
+.footer {
+  background: var(--footer);
+  min-height: 10rem;
+  box-shadow: 0 -3px 10px 0px rgba(0,0,0,0.2);
 }
 
-.contact-card {
-  width: 30%;
-  background-color: var(--accent2);
-  border-radius: 1rem;
-  position: relative;
+.footer-container {
+  align-items: start;
+  width: 70%;
+}
+
+.footer-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: var(--accent) 3px solid;
+  min-width: fit-content;
+  margin-top: 2rem;
 }
 
-.contact-card-icon {
-  width: 6rem;
-  background: var(--background);
-  aspect-ratio: 1/1;
-  display: flex;
-  position: relative;
-  border-radius: 100%;
-  justify-content: center;
-  align-items: center;
-  border: solid var(--accent) 3px;
-  top: -5%;
+.footer-section-title {
+  color: var(--inactive);
+  font-size: 1rem;
+  height: 100%;
+  margin-bottom: 1rem;
 }
 
-.contact-card-icon-img {
-  width: 50%;
-  fill: var(--accent);
-}
-
-.contact-card-title {
-  font-size: 1.2rem;
-  color: var(--accent);
-  text-transform: uppercase;
-}
-
-.contact-card-info {
-  font-size: 0.8rem;
-  width: 70%;
-  text-align: center;
-  margin-top: 0.7rem;
-  line-height: 1.1rem;
-  font-weight: bold;
-}
-
-.contact-card-info a {
-  text-decoration: underline;
-  cursor: pointer;
+.footer-section-info {
+ text-decoration: underline;
+ color: var(--contrast);
 }
 
 @media screen and (max-width: 1200px) {
@@ -613,6 +584,10 @@ header {
   
   .contact-card-info {
     width: 95%;
+  }
+
+  .footer-container {
+    width: 60%;
   }
 }
 
