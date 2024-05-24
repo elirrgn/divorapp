@@ -5,11 +5,9 @@ import Footer from "../Components/Footer";
 function Contact() {
     return(
         <>
-            <Header />
             <div className="contact-header">
             </div>
             <HomeContacts />
-            <Footer />
         </>
     );
 }

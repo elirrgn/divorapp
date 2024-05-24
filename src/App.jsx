@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
 
 function App() {
   return(
     <>
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -13,6 +16,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>  
   );
 }
